@@ -60,8 +60,15 @@
 .ml-20 {
     margin-left: 20px;
 }
+.pr-20 {
+    padding-right: 20px;
+}
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(45deg, rgb(125, 10, 255), rgb(3, 147, 243));
+    /* background-image: url('./close-up-calendar-design.jpeg');
+    background-size: cover;
+    background-position: center top; */
 }
 
 /* Battery */
@@ -72,7 +79,7 @@ body {
 .macbook-battery {
     width: 25px;
     height: 12px;
-    border: 1px solid #555;
+    border: 1px solid #333;
     border-radius: 3px;
     position: relative;
     margin-right: 5px;
@@ -81,7 +88,7 @@ body {
     content: '';
     width: 60%;
     height: 8px;
-    background: #555;
+    background: #333;
     border-radius: 2px;
     position: absolute;
     left: 1px;
@@ -92,7 +99,7 @@ body {
     position: absolute;
     width: 2px;
     height: 4px;
-    background: #555;
+    background: #333;
     right: -4px;
     top: 50%;
     margin-top: -2px;
@@ -107,7 +114,7 @@ body {
 /* WiFi */
 .macbook-wifi-icon-wrap {
     width: 16px;
-    height: 16px;
+    height: 14px;
     position: relative;
 }
 .macbook-wifi-icon-wrap span:last-child {
@@ -116,7 +123,7 @@ body {
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: #555;
+    background: #333;
     bottom: 0;
     left: 50%;
     margin-left: -2px;
@@ -127,7 +134,7 @@ body {
     width: 15px;
     height: 12px;
     border-radius: 50%;
-    border: 2px solid #555;
+    border: 2px solid #333;
     bottom: -4px;
     left: 0.4px;
     border-left: 2px solid transparent;
@@ -135,9 +142,9 @@ body {
     border-right: 2px solid transparent;
 }
 .macbook-wifi-icon-wrap span:first-child {
-    bottom: -0.8px;
+    bottom: 0.2px;
     width: 23px;
-    left: -3px;
+    left: -4px;
 }
 
 
@@ -151,7 +158,7 @@ body {
 .control-panel-icon span {
     width: 100%;
     height: 7px;
-    border: 1px solid #555;
+    border: 1px solid #333;
     border-radius: 10px;
     position: relative;
 }
@@ -161,17 +168,46 @@ body {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #555;
+    background: #333;
     left: 1px;
     top: 1px;
 }
 .control-panel-icon span:last-child {
-    background: #555;
+    background: #333;
 }
 .control-panel-icon span:last-child:before {
     left: auto;
     right: 1px;
     background: #fff;
+}
+
+
+/* Search Icon */
+.macbook-search-icon {
+    position: relative;
+    width: 13px;
+    height: 14px;
+}
+.macbook-search-icon:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #333;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+.macbook-search-icon:after {
+    content: '';
+    width: 1px;
+    height: 6px;
+    background: #333;
+    position: absolute;
+    transform-origin: bottom;
+    right: 0;
+    bottom: 1px;
+    transform: rotate(-45deg);
 }
 
 
@@ -185,12 +221,54 @@ body {
     padding: 0;
     list-style: none;
 }
-.macbook-menu > li {
-    margin-left: 20px;
+.macbook-menu li {
+    display: block;
 }
 .macbook-menu li a {
     font-weight: 400;
-    color: #555;
+    color: #333;
     text-decoration: none;
     font-size: 14px;
+    cursor: default;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    display: block;
+}
+.macbook-menu .logo .apple-logo:hover,
+.macbook-menu li a:hover {
+    background: rgba(0,0,0,0.1);
+}
+.macbook-menu .finder-title a {
+    font-weight: 600;
+    color: #333;
+}
+.macbook-menu .logo .apple-logo {
+    padding: 4px 12px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    border-radius: 4px;
+}
+
+/* Finder Bar */
+.macbook-menu-bar-wrap {
+    position: relative;
+    padding-left: 10px;
+}
+.macbook-menu-bar-wrap:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.75); 
 }
