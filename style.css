@@ -213,8 +213,61 @@ body {
 
 
 /* Menu */
+.macbook-menu-bar-wrap {
+    position: relative;
+    perspective: 600px;
+}
 .macbook-menu ul {
+}
+.macbook-menu .dropdown-item {
+    width: 265px;
+    border-radius: 4px;
+    padding: 5px;
+    left: 0;
+    top: 100%;
+    transition: all 0.5s;
+    /* transform: translateY(100px); */
+    opacity: 0;
+    will-change: opacity;
     display: none;
+    position: absolute;
+}
+.macbook-menu .finder-dropdown {
+    width: 260px;
+}
+.trigger-enter .dropdown-item {
+    display: block;
+}
+.trigger-enter-active .dropdown-item {
+    opacity: 1;
+}
+.macbook-menu-bar-wrap .background-highlight {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+    transition: all 0.3s, opacity 0.1s, transform 0.2s;
+    transform-origin: 50% 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translate(0px, 0px);
+}
+.macbook-menu-bar-wrap .background-highlight.open {
+    opacity: 1;
+}
+.macbook-menu .dropdown-item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
 }
 .macbook-menu {
     margin: 0;
@@ -223,6 +276,7 @@ body {
 }
 .macbook-menu li {
     display: block;
+    position: relative;
 }
 .macbook-menu li a {
     font-weight: 400;
