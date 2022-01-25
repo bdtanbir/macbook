@@ -232,6 +232,17 @@ body {
     display: none;
     position: absolute;
 }
+.macbook-menu .dropdown-item li a {
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -ms-transition: .1s;
+    -o-transition: .1s;
+}
+.macbook-menu .dropdown-item li a:hover {
+    background: rgb(0, 141, 235);
+    color: #fff;
+}
 .macbook-menu .finder-dropdown {
     width: 260px;
 }
@@ -245,7 +256,6 @@ body {
     width: 100px;
     height: 100px;
     position: absolute;
-    background: #fff;
     border-radius: 4px;
     box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
     transition: all 0.3s, opacity 0.1s, transform 0.2s;
@@ -258,6 +268,7 @@ body {
 .macbook-menu-bar-wrap .background-highlight.open {
     opacity: 1;
 }
+.macbook-menu-bar-wrap .background-highlight:before,
 .macbook-menu .dropdown-item:before {
     content: '';
     position: absolute;
@@ -296,7 +307,7 @@ body {
 .macbook-menu li a:hover {
     background: rgba(0,0,0,0.1);
 }
-.macbook-menu .finder-title a {
+.macbook-menu .finder-title > a {
     font-weight: 600;
     color: #333;
 }
